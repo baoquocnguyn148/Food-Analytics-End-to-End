@@ -1,3 +1,4 @@
+/// <reference path="./src/types/express.d.ts" />
 import app from "./src/app";
 import config from "./src/config/env";
 import logger from "./src/config/logger";

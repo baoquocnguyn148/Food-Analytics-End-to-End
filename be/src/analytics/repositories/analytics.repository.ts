@@ -449,11 +449,11 @@ export class AnalyticsRepository {
   }): number {
     let score = 50;
 
-    if (nutrition.protein >= 10) score += 15;
-    else if (nutrition.protein >= 5) score += 10;
+    if ((nutrition.protein || 0) >= 10) score += 15;
+    else if ((nutrition.protein || 0) >= 5) score += 10;
 
-    if (nutrition.fiber >= 3) score += 15;
-    else if (nutrition.fiber >= 1) score += 10;
+    if ((nutrition.fiber || 0) >= 3) score += 15;
+    else if ((nutrition.fiber || 0) >= 1) score += 10;
 
     if ((nutrition.sugarTotal || 0) > 20) score -= 20;
     else if ((nutrition.sugarTotal || 0) > 10) score -= 15;

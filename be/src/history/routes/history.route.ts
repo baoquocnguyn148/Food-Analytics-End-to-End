@@ -6,8 +6,6 @@ import { authenticate } from "../../middleware/auth.middleware";
 // (GET /recommendations/history, GET /chat/history).
 const router = Router();
 
-router.use(authenticate);
-
 /**
  * @openapi
  * /recommendations/history:
@@ -29,7 +27,7 @@ router.use(authenticate);
  *       401:
  *         description: Unauthorized
  */
-router.get("/recommendations/history", HistoryController.getRecommendationHistory);
+router.get("/recommendations/history", authenticate, HistoryController.getRecommendationHistory);
 
 /**
  * @openapi
@@ -52,7 +50,7 @@ router.get("/recommendations/history", HistoryController.getRecommendationHistor
  *       401:
  *         description: Unauthorized
  */
-router.get("/chat/history", HistoryController.getChatHistory);
+router.get("/chat/history", authenticate, HistoryController.getChatHistory);
 
 /**
  * @openapi
@@ -73,6 +71,6 @@ router.get("/chat/history", HistoryController.getChatHistory);
  *       404:
  *         description: Session not found
  */
-router.get("/chat/history/:id", HistoryController.getChatSession);
+router.get("/chat/history/:id", authenticate, HistoryController.getChatSession);
 
 export default router;

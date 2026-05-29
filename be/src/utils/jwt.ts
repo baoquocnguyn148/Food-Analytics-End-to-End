@@ -28,9 +28,9 @@ export const signRefreshToken = (payload: JwtPayload): string => {
 };
 
 export const verifyAccessToken = (token: string): JwtPayload => {
-  return jwt.verify(token, config.JWT_SECRET) as JwtPayload;
+  return jwt.verify(token, config.JWT_SECRET) as unknown as JwtPayload;
 };
 
 export const verifyRefreshToken = (token: string): JwtPayload => {
-  return jwt.verify(token, config.JWT_REFRESH_SECRET) as JwtPayload;
+  return jwt.verify(token, config.JWT_REFRESH_SECRET) as unknown as JwtPayload;
 };

@@ -50,7 +50,7 @@ interface FoodRecord {
 async function seed() {
   console.log("🌱 Starting database seed...");
 
-  const csvPath = path.join(__dirname, "../database/food.csv");
+  const csvPath = path.join(__dirname, "../../database/food.csv");
   const foods: any[] = [];
 
   try {
