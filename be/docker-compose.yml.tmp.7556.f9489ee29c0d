@@ -1,0 +1,68 @@
+# =====================================================================
+# Food Analytics - local/prod orchestration (Sprint 8 - P6)
+# =====================================================================
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: food-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-123456}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-food_analytics}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-p${MYSQL_ROOT_PASSWORD:-123456}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: food-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: food-backend
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+      DATABASE_URL: "mysql://root:${MYSQL_ROOT_PASSWORD:-123456}@mysql:3306/${MYSQL_DATABASE:-food_analytics}"
+      JWT_SECRET: ${JWT_SECRET:-change-me-in-production}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-change-me-refresh-in-production}
+      JWT_ACCESS_EXPIRES_IN: "15m"
+      JWT_REFRESH_EXPIRES_IN: "7d"
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:3000}
+      REDIS_URL: "redis://redis:6379"
+      REDIS_ENABLED: "true"
+      LOG_LEVEL: "info"
+    ports:
+      - "5000:5000"
+    volumes:
+      - backend_logs:/app/logs
+
+volumes:
+  mysql_data:
+  redis_data:
+  backend_logs:

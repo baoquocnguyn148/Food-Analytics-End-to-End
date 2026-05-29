@@ -1,0 +1,17 @@
+{
+  "files.watcherExclude": {
+    "**/.next/**": true,
+    "**/node_modules/**": true,
+    "**/.prisma/**": true,
+    "**/.prisma-pg/**": true,
+    "**/dist/**": true,
+    "**/coverage/**": true
+  },
+  "search.exclude": {
+    "**/.next": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/coverage": true
+  },
+  "typescript.disableAutomaticTypeAcquisition": true
+}

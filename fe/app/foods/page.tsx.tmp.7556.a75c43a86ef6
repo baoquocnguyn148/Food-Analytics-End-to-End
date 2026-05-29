@@ -1,0 +1,130 @@
+"use client";
+
+import { useCallback, useEffect, useState } from "react";
+import { NavBar } from "@/components/nav-bar";
+import { FoodCard } from "@/components/food-card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { api, ApiError } from "@/lib/api";
+import type { Food, Pagination } from "@/lib/types";
+import { Search } from "lucide-react";
+import { toast } from "sonner";
+
+export default function FoodsPage() {
+  const [foods, setFoods] = useState<Food[]>([]);
+  const [pagination, setPagination] = useState<Pagination | null>(null);
+  const [query, setQuery] = useState("");
+  const [searching, setSearching] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  const loadPage = useCallback(async (p: number) => {
+    setLoading(true);
+    try {
+      const res = await api.foods.list(p, 12);
+      setFoods(res.data);
+      setPagination(res.pagination);
+      setSearching(false);
+    } catch (err) {
+      toast.error(err instanceof ApiError ? err.message : "Failed to load foods");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const runSearch = useCallback(async (term: string) => {
+    setLoading(true);
+    try {
+      const res = await api.foods.search(term);
+      setFoods(res.data);
+      setPagination(null);
+      setSearching(true);
+    } catch (err) {
+      toast.error(err instanceof ApiError ? err.message : "Search failed");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  // On mount: honor a ?q= param coming from the landing search, else load page 1.
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (q) {
+      setQuery(q);
+      runSearch(q);
+    } else {
+      loadPage(1);
+    }
+  }, [loadPage, runSearch]);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!query.trim()) {
+      loadPage(1);
+    } else {
+      runSearch(query.trim());
+    }
+  };
+
+  return (
+    <>
+      <NavBar />
+      <main className="max-w-7xl mx-auto px-4 py-12">
+        <h1 className="text-4xl font-bold mb-2">Food Catalogue</h1>
+        <p className="text-muted-foreground mb-8">
+          Browse the full nutrition database — powered by the live API.
+        </p>
+
+        <form onSubmit={handleSearch} className="flex gap-2 mb-8 max-w-xl">
+          <div className="flex-1 relative">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+            <Input
+              placeholder="Search foods by name…"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="pl-12 h-12"
+            />
+          </div>
+          <Button type="submit" className="h-12 px-8 bg-primary hover:bg-primary/90">
+            Search
+          </Button>
+        </form>
+
+        {loading ? (
+          <p className="text-muted-foreground py-20">Loading…</p>
+        ) : foods.length === 0 ? (
+          <p className="text-muted-foreground py-20">No foods found.</p>
+        ) : (
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {foods.map((f) => (
+                <FoodCard key={f.id} food={f} />
+              ))}
+            </div>
+
+            {pagination && !searching && (
+              <div className="flex items-center justify-center gap-4 mt-12">
+                <Button
+                  variant="outline"
+                  disabled={!pagination.hasPrev}
+                  onClick={() => loadPage(pagination.page - 1)}
+                >
+                  Previous
+                </Button>
+                <span className="text-sm text-muted-foreground">
+                  Page {pagination.page} of {pagination.pages}
+                </span>
+                <Button
+                  variant="outline"
+                  disabled={!pagination.hasNext}
+                  onClick={() => loadPage(pagination.page + 1)}
+                >
+                  Next
+                </Button>
+              </div>
+            )}
+          </>
+        )}
+      </main>
+    </>
+  );
+}

@@ -1,0 +1,70 @@
+# =====================================================================
+# Food Analytics - local/prod orchestration (Sprint 8 - P6)
+# =====================================================================
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: food-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-290104}
+      POSTGRES_DB: ${POSTGRES_DB:-food_analytics}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-food_analytics}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: food-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: food-backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+      # Inside the compose network, reach Postgres on its service name + internal port 5432
+      DATABASE_URL: "postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-290104}@postgres:5432/${POSTGRES_DB:-food_analytics}"
+      JWT_SECRET: ${JWT_SECRET:-change-me-in-production}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-change-me-refresh-in-production}
+      JWT_ACCESS_EXPIRES_IN: "15m"
+      JWT_REFRESH_EXPIRES_IN: "7d"
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:3000}
+      REDIS_URL: "redis://redis:6379"
+      REDIS_ENABLED: "true"
+      LOG_LEVEL: "info"
+    ports:
+      - "5000:5000"
+    volumes:
+      - backend_logs:/app/logs
+
+volumes:
+  postgres_data:
+  redis_data:
+  backend_logs:
