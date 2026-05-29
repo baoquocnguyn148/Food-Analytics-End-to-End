@@ -9,7 +9,6 @@ interface AuthContextValue {
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
-  register: (email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
 }
 
@@ -19,21 +18,30 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Hydrate from localStorage on mount.
+  // On mount: verify stored token with the server.
+  // If invalid/expired, clear the session so stale localStorage doesn't keep users "logged in".
   useEffect(() => {
-    setUser(tokenStore.getUser());
-    setLoading(false);
+    const storedUser = tokenStore.getUser();
+    const accessToken = tokenStore.getAccess();
+
+    if (!storedUser || !accessToken) {
+      setLoading(false);
+      return;
+    }
+
+    api.auth.me()
+      .then((res) => {
+        setUser(res.data as User);
+      })
+      .catch(() => {
+        tokenStore.clear();
+        setUser(null);
+      })
+      .finally(() => setLoading(false));
   }, []);
 
   const login = useCallback(async (email: string, password: string) => {
     const res = await api.auth.login(email, password);
-    tokenStore.setTokens(res.data.accessToken, res.data.refreshToken);
-    tokenStore.setUser(res.data.user);
-    setUser(res.data.user);
-  }, []);
-
-  const register = useCallback(async (email: string, password: string) => {
-    const res = await api.auth.register(email, password);
     tokenStore.setTokens(res.data.accessToken, res.data.refreshToken);
     tokenStore.setUser(res.data.user);
     setUser(res.data.user);
@@ -53,7 +61,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, register, logout }}>
+    <AuthContext.Provider value={{ user, loading, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

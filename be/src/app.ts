@@ -27,6 +27,11 @@ import monitoringRoutes from "./monitoring/monitoring.route";
 
 const app = express();
 
+// BigInt → string so res.json() can serialize Prisma's BigInt fields (e.g. nutrientDataBankNumber)
+app.set("json replacer", (_key: string, value: unknown) =>
+  typeof value === "bigint" ? value.toString() : value
+);
+
 // --- Security (Sprint 8 - P2) ---
 app.use(helmet());
 app.use(

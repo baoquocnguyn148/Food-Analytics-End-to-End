@@ -8,6 +8,8 @@ const ChatQueryDto = z.object({
     userGoals: z.array(z.string()).optional(),
     dietRestrictions: z.array(z.string()).optional(),
     activityLevel: z.string().optional(),
+    lastFoodId: z.number().optional(),
+    lastFoodName: z.string().optional(),
     conversationHistory: z.array(z.object({
       role: z.enum(["user", "assistant"]),
       content: z.string(),
@@ -31,16 +33,29 @@ export const askChatbot = async (req: Request, res: Response) => {
       userGoals: inputContext?.userGoals,
       dietRestrictions: inputContext?.dietRestrictions,
       activityLevel: inputContext?.activityLevel,
-      conversationHistory: inputContext?.conversationHistory || [],
+      lastFoodId: inputContext?.lastFoodId,
+      lastFoodName: inputContext?.lastFoodName,
+      conversationHistory: inputContext?.conversationHistory ?? [],
     };
 
-    const response = await ChatbotService.handleChatQuery(message, context);
+    const result = await ChatbotService.handleChatQuery(message, context);
+
+    // Merge context updates returned by the service into the current context
+    const updatedContext: ChatContext = {
+      ...context,
+      ...result.context,
+      conversationHistory: [
+        ...context.conversationHistory,
+        { role: "user", content: message },
+        { role: "assistant", content: result.message },
+      ],
+    };
 
     res.json({
       success: true,
       data: {
-        message: response,
-        context,
+        message: result.message,
+        context: updatedContext,
       },
     });
   } catch (error) {

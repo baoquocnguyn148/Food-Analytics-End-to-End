@@ -3,17 +3,16 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+// useAuth intentionally not imported — register redirects to /login without auto-login
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { useAuth } from "@/lib/auth-context";
-import { ApiError } from "@/lib/api";
+import { api, ApiError } from "@/lib/api";
 import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
 
 export default function RegisterPage() {
-  const { register } = useAuth();
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,9 +31,9 @@ export default function RegisterPage() {
     }
     setLoading(true);
     try {
-      await register(email, password);
-      toast.success("Account created!");
-      router.push("/");
+      await api.auth.register(email, password);
+      toast.success("Tạo tài khoản thành công! Vui lòng đăng nhập.");
+      router.push("/login");
     } catch (err) {
       toast.error(err instanceof ApiError ? err.message : "Registration failed");
     } finally {
