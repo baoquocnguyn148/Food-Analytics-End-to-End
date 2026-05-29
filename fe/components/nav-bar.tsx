@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -25,6 +25,7 @@ const LINKS = [
 export function NavBar() {
   const { user, logout, loading } = useAuth();
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleLogout = async () => {
     await logout();
@@ -43,11 +44,20 @@ export function NavBar() {
         </Link>
 
         <div className="flex items-center gap-2 md:gap-4">
-          {LINKS.map((l) => (
-            <Button key={l.href} variant="ghost" size="sm" asChild>
-              <Link href={l.href}>{l.label}</Link>
-            </Button>
-          ))}
+          {LINKS.map((l) => {
+            const isActive = pathname === l.href || pathname.startsWith(l.href + "/");
+            return (
+              <Button
+                key={l.href}
+                variant="ghost"
+                size="sm"
+                asChild
+                className={isActive ? "bg-primary/10 text-primary font-semibold" : ""}
+              >
+                <Link href={l.href}>{l.label}</Link>
+              </Button>
+            );
+          })}
 
           {loading ? null : user ? (
             <DropdownMenu>
