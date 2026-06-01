@@ -1,0 +1,11 @@
+description,main_group,sub_group,calories,protein,carbohydrate,fat_total_lipid,cws,recommendation_score
+"Halibut, smoked",Seafood,Fish,207.24,44.61,0.0,3.2,47.0,7.062
+"Shrimp, dried",Seafood,Shellfish,237.76,51.7,0.0,3.44,32.4,6.969
+"Beaver, cooked",Meat & Poultry,Game Meat,201.17,34.7,0.0,6.93,46.9,5.796
+"Venison/deer ribs, cooked",Meat & Poultry,Game Meat,179.69,36.08,0.0,3.93,47.1,5.668
+"Venison/deer, roasted",Meat & Poultry,Game Meat,179.69,36.08,0.0,3.93,47.1,5.668
+"Venison/deer, NFS",Meat & Poultry,Game Meat,179.69,36.08,0.0,3.93,47.1,5.668
+"Venison/deer, stewed",Meat & Poultry,Game Meat,179.69,36.08,0.0,3.93,47.1,5.668
+"Trout, smoked",Seafood,Fish,240.79,35.47,0.0,10.99,40.9,5.593
+"Cheese, Mozzarella, nonfat or fat free",Dairy & Eggs,Cheese,140.8,31.7,3.5,0.0,51.5,5.578
+"Fried pork chunks, Puerto Rican style",Meat & Poultry,Pork,246.91,35.33,0.86,11.35,41.1,5.509

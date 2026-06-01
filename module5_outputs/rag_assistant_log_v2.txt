@@ -1,0 +1,161 @@
+=================================================================
+  MODULE 5 - CHATBOT TEST LOG
+=================================================================
+
+
+=================================================================
+  PERSONA 1 - Dinh duong co ban
+=================================================================
+
+Q [Tim thong tin trung luoc]: trứng luộc
+A:
+Khong tim thay 'trứng luộc' trong du lieu. Thu: 'trung chien healthy khong?' hoac 'goi y cho gymmer' hoac 'thay the com trang it carb'
+--------------------------------------------------
+
+Q [Tim thong tin sua]: sữa tươi
+A:
+Tim thay: 'Soy milk' [Healthy] - Plant-based Alternatives
+  Calo=43.3 | Dam=2.6g | Carb=4.9g | Beo=1.5g
+  Sodium=47mg | NOVA=1
+  Phu hop che do an: keto, heart health, weight loss, diabetes friendly, vegan
+
+--------------------------------------------------
+
+Q [Tim thong tin chuoi]: chuối
+A:
+Tim thay: 'Banana, raw' [Healthy] - Fruits
+  Calo=98.7 | Dam=1.1g | Carb=22.8g | Beo=0.3g
+  Sodium=1mg | NOVA=1
+  Phu hop che do an: heart health, weight loss, vegan
+
+--------------------------------------------------
+
+=================================================================
+  PERSONA 2 - Gymmer tang co
+=================================================================
+
+Q [Goi y mon an gymmer]: gợi ý cho gymmer tập gym tăng cơ
+A:
+Top mon an phu hop cho muc tieu [Tang co (Protein cao, Calo vua)]:
+  - Natto                                         | Cal=227 | Pro=19.4g | Carb=12.7g
+  - Chicken or turkey divan                       | Cal=143 | Pro=15.5g | Carb=4.0g
+  - Goulash, NFS                                  | Cal=163 | Pro=15.3g | Carb=8.7g
+  - Steak submarine sandwich with lettuce and tom | Cal=198 | Pro=15.8g | Carb=20.3g
+  - Liver, beef or calves, and onions             | Cal=127 | Pro=16.7g | Carb=7.0g
+  - Almond chicken                                | Cal=203 | Pro=16.1g | Carb=4.7g
+  - Squid, raw                                    | Cal=87 | Pro=15.6g | Carb=3.1g
+  - Pike, coated, baked or broiled, no added fat  | Cal=150 | Pro=21.2g | Carb=13.1g
+
+--------------------------------------------------
+
+Q [Thay com trang it carb]: thay thế cơm trắng ít carb
+A:
+Mon goc tim thay: 'Rice, white, cooked, glutinous'
+  Calo: 93.6 kcal | Dam: 2.0g | Carb: 21.0g | Beo: 0.2g | Sodium: 227mg
+  -> Goi y thay the (it carb):
+     - Rice, brown, with carrots and tomatoes and/or tomato-based sauce, no added fat | Cal=98 | Dam=2.2g | Carb=20.4g | Beo=0.8g [Neutral]
+     - Rice, brown, with carrots, dark green vegetables, and tomatoes and/or tomato-based sauce, no added fat | Cal=100 | Dam=2.4g | Carb=20.8g | Beo=0.8g [Neutral]
+     - Rice, brown, with dark green vegetables and tomatoes and/or tomato-based sauce, fat added | Cal=110 | Dam=2.4g | Carb=19.5g | Beo=2.5g [Neutral]
+
+--------------------------------------------------
+
+Q [Danh gia uc ga]: ức gà có healthy không
+A:
+Mon tim thay: 'Chicken breast, stewed, skin eaten' - Danh gia: [Trung Binh]
+  Diem Healthy (ML): 0.0/100
+  Calo: 173.3 kcal | Dam: 24.7g | Carb: 0.0g | Beo: 8.3g
+  Sodium: 316mg | NOVA: 3 | NDS: 35.6
+
+--------------------------------------------------
+
+=================================================================
+  PERSONA 3 - Benh nhan tieu duong
+=================================================================
+
+Q [Canh bao tieu duong + com]: cơm trắng bị tiểu đường có nên ăn không
+A:
+Mon tim thay: 'Rice, white, cooked, glutinous' - Danh gia: [Trung Binh]
+  Diem Healthy (ML): 0.0/100
+  Calo: 93.6 kcal | Dam: 2.0g | Carb: 21.0g | Beo: 0.2g
+  Sodium: 227mg | NOVA: 3 | NDS: 30.4
+  [CANH BAO] Tieu duong: Carb 21.0g - Nen an it lai!
+
+--------------------------------------------------
+
+Q [Canh bao tieu duong + banh mi]: bánh mì trắng tiểu đường có tốt không
+A:
+Mon tim thay: 'Bread, white' - Danh gia: [Trung Binh]
+  Diem Healthy (ML): 0.0/100
+  Calo: 266.8 kcal | Dam: 9.4g | Carb: 49.2g | Beo: 3.6g
+  Sodium: 477mg | NOVA: 3 | NDS: 36.2
+  [CANH BAO] Tieu duong: Carb 49.2g - Nen an it lai!
+
+--------------------------------------------------
+
+Q [Goi y che do tieu duong]: gợi ý cho người tiểu đường ăn gì
+A:
+Khong tim thay 'gợi ý cho người tiểu đường ăn gì' trong du lieu. Thu tu khoa khac.
+--------------------------------------------------
+
+=================================================================
+  PERSONA 4 - Tim mach
+=================================================================
+
+Q [Canh bao tim mach]: xúc xích ăn nhiều có tốt cho tim mạch không
+A:
+Mon tim thay: 'Deer sausage' - Danh gia: [Kem (Unhealthy)]
+  Diem Healthy (ML): 0.0/100
+  Calo: 296.0 kcal | Dam: 10.9g | Carb: 4.3g | Beo: 26.1g
+  Sodium: 1013mg | NOVA: 3 | NDS: 29.0
+  [CANH BAO] Tim mach: Sodium cao (1013mg) - Han che su dung!
+
+--------------------------------------------------
+
+Q [Danh gia thit xong khoi]: thịt xông khói có healthy không
+A:
+Mon tim thay: 'Bacon bits' - Danh gia: [Kem (Unhealthy)]
+  Diem Healthy (ML): 0.0/100
+  Calo: 475.5 kcal | Dam: 32.0g | Carb: 28.6g | Beo: 25.9g
+  Sodium: 1770mg | NOVA: 3 | NDS: 39.3
+
+--------------------------------------------------
+
+Q [Thay the bacon it muoi]: thay thế thịt xông khói ít muối
+A:
+Mon goc tim thay: 'Bacon bits'
+  Calo: 475.5 kcal | Dam: 32.0g | Carb: 28.6g | Beo: 25.9g | Sodium: 1770mg
+  -> Goi y thay the (it muoi):
+     - Frankfurter or hot dog sandwich, beef and pork, plain, on whole wheat bun | Cal=288 | Dam=11.5g | Carb=23.8g | Beo=16.3g [Neutral]
+     - Frankfurter or hot dog sandwich, meat and poultry, plain, on whole wheat bun | Cal=281 | Dam=11.2g | Carb=22.8g | Beo=16.2g [Neutral]
+     - Frankfurter or hot dog sandwich, beef and pork, plain, on multigrain bread | Cal=286 | Dam=11.7g | Carb=20.9g | Beo=17.3g [Neutral]
+
+--------------------------------------------------
+
+=================================================================
+  PERSONA 5 - Giam can
+=================================================================
+
+Q [Goi y giam can]: gợi ý giảm cân
+A:
+Top mon an phu hop cho muc tieu [Giam can (Calo <= 180)]:
+  - Oatmeal, regular or quick, made with milk, no | Cal=115 | Pro=5.6g | Carb=16.3g
+  - Oatmeal, regular or quick, made with milk, NS | Cal=127 | Pro=5.5g | Carb=16.0g
+  - Oatmeal, regular or quick, made with milk, fa | Cal=127 | Pro=5.5g | Carb=16.0g
+  - Oatmeal, instant, plain, made with milk, no a | Cal=115 | Pro=5.0g | Carb=17.1g
+  - Oatmeal, instant, plain, made with milk, NS a | Cal=133 | Pro=4.8g | Carb=16.6g
+  - Oatmeal,  instant, plain, made with milk, fat | Cal=133 | Pro=4.8g | Carb=16.6g
+  - Pupusa, bean-filled                           | Cal=170 | Pro=5.5g | Carb=28.4g
+  - Rice, white, with lentils, NS as to fat       | Cal=151 | Pro=5.5g | Carb=21.4g
+
+--------------------------------------------------
+
+Q [Thay banh mi healthy hon]: thay thế bánh mì trắng healthy hơn
+A:
+Mon goc tim thay: 'Bread, white'
+  Calo: 266.8 kcal | Dam: 9.4g | Carb: 49.2g | Beo: 3.6g | Sodium: 477mg
+  -> Goi y thay the (lanh manh hon):
+     - Cereal, corn flakes | Cal=370 | Dam=7.5g | Carb=84.1g | Beo=0.4g [Neutral]
+     - Cereal (Kellogg's Corn Flakes) | Cal=370 | Dam=7.5g | Carb=84.1g | Beo=0.4g [Neutral]
+     - Roll, sour dough | Cal=272 | Dam=10.8g | Carb=51.9g | Beo=2.4g [Neutral]
+
+--------------------------------------------------

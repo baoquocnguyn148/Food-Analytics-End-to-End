@@ -1,0 +1,11 @@
+description,main_group,sub_group,calories,protein,carbohydrate,fat_total_lipid,cws,recommendation_score
+"Wheat bran, unprocessed",Grains & Bakery,Bran & Germ,358.49,15.55,64.51,4.25,81.1,8.703
+"Tea, iced, instant, black, unsweetened, dry",Beverages,Tea,315.48,20.21,58.66,0.0,78.6,8.354
+"Cocoa powder, not reconstituted",Sweets & Desserts,Chocolate,433.3,19.6,57.9,13.7,78.9,8.308
+"Parsley, raw",Vegetables,Other Vegetables,44.31,2.97,6.33,0.79,70.6,8.217
+"Nutritional powder mix, high protein (Slim Fast)",Supplements & Sports,Protein Supplements,432.62,27.87,50.0,13.46,79.4,7.969
+"Textured vegetable protein, dry",Plant-based Alternatives,Soy Products,352.5,51.46,33.92,1.22,82.9,7.837
+"Fruit flavored drink, powdered, not reconstituted, diet",Other,Other,351.68,0.45,87.38,0.04,56.7,7.297
+Chia seeds,"Legumes, Nuts & Seeds",Seeds,568.12,18.29,28.88,42.16,71.8,7.271
+Flax seeds,"Legumes, Nuts & Seeds",Seeds,568.12,18.29,28.88,42.16,71.8,7.271
+Cereal (Kellogg's All-Bran Complete Wheat Flakes),Grains & Bakery,Cereal,389.7,10.2,81.6,2.5,72.3,7.267

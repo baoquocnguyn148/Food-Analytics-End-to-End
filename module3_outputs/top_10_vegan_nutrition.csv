@@ -1,0 +1,11 @@
+description,main_group,sub_group,calories,protein,carbohydrate,fat_total_lipid,cws,recommendation_score
+"Wheat bran, unprocessed",Grains & Bakery,Bran & Germ,358.49,15.55,64.51,4.25,81.1,11.293
+"Textured vegetable protein, dry",Plant-based Alternatives,Soy Products,352.5,51.46,33.92,1.22,82.9,10.729
+Cereal (General Mills Fiber One),Grains & Bakery,Cereal,384.17,6.59,84.3,2.29,67.6,9.596
+Cereal (Kellogg's All-Bran),Grains & Bakery,Cereal,393.62,13.14,74.24,4.9,72.9,9.076
+Chia seeds,"Legumes, Nuts & Seeds",Seeds,568.12,18.29,28.88,42.16,71.8,8.867
+Flax seeds,"Legumes, Nuts & Seeds",Seeds,568.12,18.29,28.88,42.16,71.8,8.867
+Soy nuts,Other,Other,503.68,38.55,30.22,25.4,70.2,8.746
+"Vegetable mixture, dried",Vegetables,Other Vegetables,340.02,17.37,47.79,8.82,74.8,8.627
+Cereal (Kellogg's All-Bran Complete Wheat Flakes),Grains & Bakery,Cereal,389.7,10.2,81.6,2.5,72.3,8.171
+"Wheat germ, plain",Grains & Bakery,Other Grains,411.1,29.1,49.6,10.7,71.5,8.108

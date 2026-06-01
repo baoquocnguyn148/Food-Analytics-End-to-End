@@ -1,0 +1,78 @@
+============================================================
+PHASE 0 — QC REPORT
+============================================================
+Input rows:          7,083
+Output columns:      78
+
+── CALORIES ──
+  Zero calories:     25  (expected ~25 — water/tea)
+  Mean calories:     198.3 kcal
+  Max calories:      900.3 kcal
+
+── SCORES ──
+  NDS range:         0.0 – 100.0
+  CWS range:         6.9 – 82.9
+  Negative NDS:      0  (expected 0)
+
+── HIERARCHY ──
+  Coverage:          91.2%  (target ≥ 90%)
+  Uncovered (Other): 624
+
+── BOOLEAN FLAGS ──
+  is_fortified:      24
+  is_plant_based:    2328
+  is_infant:         404
+  is_raw:            272
+
+── PROCESSING LEVEL ──
+  NOVA 1 (Unprocessed): 3,228
+  NOVA 2 (Minimally processed): 612
+  NOVA 3 (Processed): 2,517
+  NOVA 4 (Ultra-processed): 726
+
+── MAIN GROUP DISTRIBUTION ──
+  Meat & Poultry                    1319
+  Dairy & Eggs                      1292
+  Grains & Bakery                    744
+  Vegetables                         635
+  Other                              628
+  Seafood                            460
+  Infant Nutrition                   398
+  Fruits                             390
+  Beverages                          269
+  Sweets & Desserts                  247
+  Fast Food & Prepared               222
+  Condiments & Sauces                201
+  Plant-based Alternatives            90
+  Legumes, Nuts & Seeds               80
+  Supplements & Sports                50
+  Snacks & Desserts                   31
+  Soups & Broths                      22
+  Salads & Mixed                       5
+
+── MISSING CRITICAL COLUMNS ──
+  None — all OK
+
+── TOP 10 NDS FOODS (excl. supplements & infant) ──
+  Parsley, raw                                   NDS=100.0  cal=44
+  Fruit flavored drink, powdered, not reconstit  NDS=99.8  cal=352
+  Wheat bran, unprocessed                        NDS=95.6  cal=358
+  Tea, iced, instant, black, unsweetened, dry    NDS=95.0  cal=315
+  Cereal (Kellogg's All-Bran Complete Wheat Fla  NDS=91.9  cal=390
+  Cocoa powder, not reconstituted                NDS=90.2  cal=433
+  Vegetable mixture, dried                       NDS=86.2  cal=340
+  Textured vegetable protein, dry                NDS=83.4  cal=352
+  Cereal (Kellogg's All-Bran)                    NDS=82.3  cal=394
+  Seaweed, dried                                 NDS=80.0  cal=373
+
+── TOP 10 CWS FOODS (excl. supplements & infant) ──
+  Textured vegetable protein, dry                CWS=82.9  cal=352
+  Wheat bran, unprocessed                        CWS=81.1  cal=358
+  Cocoa powder, not reconstituted                CWS=78.9  cal=433
+  Tea, iced, instant, black, unsweetened, dry    CWS=78.6  cal=315
+  Vegetable mixture, dried                       CWS=74.8  cal=340
+  Sun-dried tomatoes                             CWS=73.2  cal=306
+  Cereal (Kellogg's All-Bran)                    CWS=72.9  cal=394
+  Cereal (Kellogg's All-Bran Complete Wheat Fla  CWS=72.3  cal=390
+  Flax seeds                                     CWS=71.8  cal=568
+  Chia seeds                                     CWS=71.8  cal=568

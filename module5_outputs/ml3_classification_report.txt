@@ -1,0 +1,27 @@
+ML-3: XGBOOST HEALTH CLASSIFICATION REPORT
+==================================================
+
+Accuracy:  0.9781
+F1-score:  0.9781
+
+Classification Report:
+              precision    recall  f1-score   support
+
+   Unhealthy       1.00      1.00      1.00        73
+     Neutral       0.98      0.97      0.98       749
+     Healthy       0.97      0.98      0.97       595
+
+    accuracy                           0.98      1417
+   macro avg       0.98      0.98      0.98      1417
+weighted avg       0.98      0.98      0.98      1417
+
+Feature Importance:
+nova_level         0.725927
+sodium             0.090483
+sugar_total        0.057688
+protein            0.026986
+fiber              0.025840
+calories           0.022640
+fat_total_lipid    0.021065
+carbohydrate       0.020301
+is_plant_based     0.009069

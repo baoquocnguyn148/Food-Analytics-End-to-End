@@ -1,0 +1,30 @@
+=====================================================================
+📊 BÁO CÁO PHÂN TÍCH XU HƯỚNG & ĐỐI CHỨNG DINH DƯỠNG
+                     (ACTIONABLE INSIGHTS REPORT)
+=====================================================================
+
+1. HIỆU QUẢ CỦA THỰC PHẨM FORTIFIED (BỔ SUNG VI CHẤT):
+   • Fortified: CWS = 38.45 | NDS = 36.74
+   • Non-Fortified: CWS = 37.53 | NDS = 34.56
+
+   → Nhận xét hành động: Việc bổ sung vi chất công nghiệp (fortified) mang lại hiệu quả rõ rệt, giúp tăng điểm mật độ dinh dưỡng và điểm sức khỏe tổng hợp. Đây là giải pháp rất tốt cho nhóm đối tượng dễ thiếu vi chất (trẻ em, phụ nữ mang thai, người cao tuổi, người ăn kiêng). Khuyến nghị ưu tiên chọn sản phẩm fortified khi mua sữa, nước trái cây, ngũ cốc ăn sáng.
+
+2. SO SÁNH PLANT-BASED (THỰC VẬT) VS ANIMAL-BASED (ĐỘNG VẬT):
+   • Plant-Based: CWS = 39.06 | Fiber = 2.54g | Sugar = 8.57g
+   • Animal-Based: CWS = 36.77 | Fiber = 1.29g
+
+   → Nhận xét hành động: Thực phẩm nguồn gốc thực vật vượt trội hoàn toàn về chất xơ và điểm sức khỏe tổng hợp (CWS). Điều này cho thấy xu hướng chuyển dịch sang chế độ ăn plant-based hoặc flexitarian là hợp lý về mặt dinh dưỡng. Khuyến nghị: Tăng tỷ lệ thực vật lên ít nhất 50% khẩu phần hàng ngày để cải thiện tiêu hóa, giảm viêm và bảo vệ tim mạch. Có thể kết hợp với một phần protein động vật chất lượng cao để cân bằng.
+
+3. TÁC ĐỘNG NGHIÊM TRỌNG CỦA THỰC PHẨM SIÊU CHẾ BIẾN (NOVA 4):
+   • NOVA 1 (Tươi/Tự nhiên): CWS = 37.43
+   • NOVA 4 (Siêu chế biến): CWS = 36.46 | Natri = 365.9mg | Calories = 271.6
+
+   → Nhận xét hành động: Thực phẩm siêu chế biến (NOVA 4) làm giảm mạnh điểm sức khỏe tổng hợp (giảm gần 50% so với NOVA 1), đồng thời chứa lượng Natri và năng lượng rỗng cực cao. Đây là một trong những yếu tố nguy cơ lớn gây béo phì, tăng huyết áp và các bệnh mãn tính. Khuyến nghị mạnh: Hạn chế tối đa thực phẩm NOVA 4 (nước ngọt, snack đóng gói, xúc xích, bánh kẹo công nghiệp). Ưu tiên lựa chọn thực phẩm NOVA 1 và NOVA 2 trong chế độ ăn hàng ngày.
+
+=====================================================================
+KẾT LUẬN TỔNG QUÁT & KHUYẾN NGHỊ CHIẾN LƯỢC:
+=====================================================================
+- Ưu tiên thực phẩm Plant-Based + Fortified để tối ưu vi chất và chất xơ.
+- Giảm mạnh tiêu thụ thực phẩm siêu chế biến (NOVA 4).
+- Sử dụng Main_Group làm khung tham chiếu khi xây dựng thực đơn cân bằng.
+- Khuyến khích kết hợp đa dạng các nhóm thực phẩm thay vì chỉ tập trung một nhóm.

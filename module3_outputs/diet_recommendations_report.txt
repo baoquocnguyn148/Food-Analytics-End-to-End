@@ -1,0 +1,116 @@
+=====================================================================
+🎯 HỆ THỐNG GỢI Ý CHẾ ĐỘ ĂN THEO MỤC TIÊU SỨC KHỎE
+=====================================================================
+
+🌟 MỤC TIÊU: MUSCLE GAIN
+📝 Chế độ ăn giàu đạm hỗ trợ tăng cơ bắp và phát triển thể hình.
+-------------------------------------------------------------------------------------
+ 1. Halibut, smoked                                                      | Score: 7.062
+ 2. Shrimp, dried                                                        | Score: 6.969
+ 3. Beaver, cooked                                                       | Score: 5.796
+ 4. Venison/deer ribs, cooked                                            | Score: 5.668
+ 5. Venison/deer, roasted                                                | Score: 5.668
+ 6. Venison/deer, NFS                                                    | Score: 5.668
+ 7. Venison/deer, stewed                                                 | Score: 5.668
+ 8. Trout, smoked                                                        | Score: 5.593
+ 9. Cheese, Mozzarella, nonfat or fat free                               | Score: 5.578
+10. Fried pork chunks, Puerto Rican style                                | Score: 5.509
+
+=====================================================================================
+
+🌟 MỤC TIÊU: KETO DIET
+📝 Chế độ ăn rất thấp carb, giàu chất béo để vào trạng thái Ketosis.
+-------------------------------------------------------------------------------------
+ 1. Soybean oil                                                          | Score: 6.095
+ 2. Vegetable oil, NFS                                                   | Score: 6.077
+ 3. Almond oil                                                           | Score: 6.064
+ 4. Walnut oil                                                           | Score: 6.060
+ 5. Peanut oil                                                           | Score: 6.019
+ 6. Wheat germ oil                                                       | Score: 6.019
+ 7. Shortening, NS as to vegetable or animal                             | Score: 5.993
+ 8. Ghee, clarified butter                                               | Score: 5.777
+ 9. Animal fat or drippings                                              | Score: 5.390
+10. Butter, stick                                                        | Score: 4.660
+
+=====================================================================================
+
+🌟 MỤC TIÊU: HEART HEALTH
+📝 Chế độ ăn bảo vệ tim mạch, kiểm soát huyết áp và cholesterol.
+-------------------------------------------------------------------------------------
+ 1. Wheat bran, unprocessed                                              | Score: 7.821
+ 2. Cocoa powder, not reconstituted                                      | Score: 6.603
+ 3. Textured vegetable protein, dry                                      | Score: 5.123
+ 4. Flax seeds                                                           | Score: 4.844
+ 5. Chia seeds                                                           | Score: 4.844
+ 6. Wheat germ, plain                                                    | Score: 4.654
+ 7. Yeast                                                                | Score: 4.613
+ 8. Cereal (Post Shredded Wheat)                                         | Score: 4.061
+ 9. Cereal (Kellogg's Frosted Mini-Wheats)                               | Score: 3.983
+10. Mixed cereal with bananas, baby food, dry, instant                   | Score: 3.896
+
+=====================================================================================
+
+🌟 MỤC TIÊU: WEIGHT LOSS
+📝 Chế độ ăn kiểm soát calo, giàu chất xơ tạo no lâu.
+-------------------------------------------------------------------------------------
+ 1. Black beans, from canned, no added fat                               | Score: 4.287
+ 2. Passion fruit, raw                                                   | Score: 4.247
+ 3. Raspberries, raw                                                     | Score: 3.628
+ 4. Raspberries, frozen                                                  | Score: 3.628
+ 5. Parsley, raw                                                         | Score: 3.540
+ 6. Black beans, from dried, no added fat                                | Score: 3.521
+ 7. Beans, from dried, NS as to type, no added fat                       | Score: 3.494
+ 8. Pinto beans, from dried, no added fat                                | Score: 3.429
+ 9. Beet greens, raw                                                     | Score: 3.401
+10. Collards, fresh, cooked, no added fat                                | Score: 3.396
+
+=====================================================================================
+
+🌟 MỤC TIÊU: DIABETES MANAGEMENT
+📝 Kiểm soát đường huyết cho người tiểu đường.
+-------------------------------------------------------------------------------------
+ 1. Wheat bran, unprocessed                                              | Score: 6.294
+ 2. Nutritional powder mix (Kellogg's Special K20 Protein Water)         | Score: 6.207
+ 3. Cocoa powder, not reconstituted                                      | Score: 5.939
+ 4. Yeast                                                                | Score: 5.872
+ 5. Nutritional powder mix, whey based, NFS                              | Score: 5.545
+ 6. Nutritional powder mix, protein, NFS                                 | Score: 5.545
+ 7. Flax seeds                                                           | Score: 5.446
+ 8. Chia seeds                                                           | Score: 5.446
+ 9. Cereal (General Mills Fiber One)                                     | Score: 5.225
+10. Tuna, fresh, dried                                                   | Score: 5.077
+
+=====================================================================================
+
+🌟 MỤC TIÊU: VEGAN NUTRITION
+📝 Chế độ ăn thuần chay cân bằng và giàu dinh dưỡng.
+-------------------------------------------------------------------------------------
+ 1. Wheat bran, unprocessed                                              | Score: 11.293
+ 2. Textured vegetable protein, dry                                      | Score: 10.729
+ 3. Cereal (General Mills Fiber One)                                     | Score: 9.596
+ 4. Cereal (Kellogg's All-Bran)                                          | Score: 9.076
+ 5. Chia seeds                                                           | Score: 8.867
+ 6. Flax seeds                                                           | Score: 8.867
+ 7. Soy nuts                                                             | Score: 8.746
+ 8. Vegetable mixture, dried                                             | Score: 8.627
+ 9. Cereal (Kellogg's All-Bran Complete Wheat Flakes)                    | Score: 8.171
+10. Wheat germ, plain                                                    | Score: 8.108
+
+=====================================================================================
+
+🌟 MỤC TIÊU: CLEAN EATING
+📝 Ăn sạch, ưu tiên thực phẩm tự nhiên ít chế biến.
+-------------------------------------------------------------------------------------
+ 1. Wheat bran, unprocessed                                              | Score: 8.703
+ 2. Tea, iced, instant, black, unsweetened, dry                          | Score: 8.354
+ 3. Cocoa powder, not reconstituted                                      | Score: 8.308
+ 4. Parsley, raw                                                         | Score: 8.217
+ 5. Nutritional powder mix, high protein (Slim Fast)                     | Score: 7.969
+ 6. Textured vegetable protein, dry                                      | Score: 7.837
+ 7. Fruit flavored drink, powdered, not reconstituted, diet              | Score: 7.297
+ 8. Chia seeds                                                           | Score: 7.271
+ 9. Flax seeds                                                           | Score: 7.271
+10. Cereal (Kellogg's All-Bran Complete Wheat Flakes)                    | Score: 7.267
+
+=====================================================================================
+

@@ -1,0 +1,61 @@
+=================================================================
+📝 NHẬT KÝ HỆ THỐNG TRỢ LÝ DINH DƯỠNG RAG
+=================================================================
+
+🤖 TRỢ LÝ DINH DƯỠNG AI - HỆ THỐNG RAG
+🔍 Yêu cầu: Tôi muốn tìm một món thay thế thịt bò hầm nhưng ít chất béo bão hòa hơn
+🥩 Thực phẩm gốc: Beef jerky
+📊 Chỉ số: 407.2 kcal | Protein: 33.2g | Fat: 25.6g
+------------------------------------------------------------------------------------------
+
+🌟 GỢI Ý THAY THẾ TỐI ƯU:
+   • Cheese, Parmesan, dry grated, reduced fat
+   • Calories : 392.5 kcal
+   • Protein  : 34.8g
+   • Fat      : 16.5g (↓ 9.1g)
+   • Cùng nhóm: Archetype 2
+
+==========================================================================================
+
+🤖 TRỢ LÝ DINH DƯỠNG AI - HỆ THỐNG RAG
+🔍 Yêu cầu: Thay thế ức gà bằng cái gì ít calo hơn?
+🥩 Thực phẩm gốc: Chicken skin
+📊 Chỉ số: 443.8 kcal | Protein: 20.2g | Fat: 40.3g
+------------------------------------------------------------------------------------------
+
+ℹ️ Không tìm thấy món giảm béo mạnh, đây là lựa chọn tương đồng nhất:
+   • Beef, shortribs, cooked, lean and fat eaten
+   • Calories: 460.2 | Protein: 21.4g | Fat: 41.6g
+
+==========================================================================================
+
+🤖 TRỢ LÝ DINH DƯỠNG AI - HỆ THỐNG RAG
+🔍 Yêu cầu: Có thực phẩm nào thay cơm trắng tốt cho người tập gym không?
+🥩 Thực phẩm gốc: Licorice
+📊 Chỉ số: 374.6 kcal | Protein: 0.0g | Fat: 0.1g
+------------------------------------------------------------------------------------------
+
+🌟 GỢI Ý THAY THẾ TỐI ƯU:
+   • Fruit snacks candy, with high vitamin C
+   • Calories : 352.2 kcal
+   • Protein  : 0.1g
+   • Fat      : 0.0g (↓ 0.1g)
+   • Cùng nhóm: Archetype 1
+
+==========================================================================================
+
+🤖 TRỢ LÝ DINH DƯỠNG AI - HỆ THỐNG RAG
+🔍 Yêu cầu: Tôi muốn thay thịt heo bằng món ít béo hơn
+🥩 Thực phẩm gốc: Pork hash
+📊 Chỉ số: 182.2 kcal | Protein: 13.0g | Fat: 13.7g
+------------------------------------------------------------------------------------------
+
+🌟 GỢI Ý THAY THẾ TỐI ƯU:
+   • Beef taco filling: beef, cheese, tomato, taco sauce
+   • Calories : 179.2 kcal
+   • Protein  : 13.0g
+   • Fat      : 11.3g (↓ 2.3g)
+   • Cùng nhóm: Archetype 2
+
+==========================================================================================
+
