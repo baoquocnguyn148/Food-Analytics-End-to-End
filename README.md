@@ -80,6 +80,18 @@ Hệ thống Chatbot tư vấn dinh dưỡng thông minh, hiểu ngôn ngữ t�
 
 Thay vì chỉ chạy trên Terminal, dự án được trực quan hoá thành một trang Web hoàn chỉnh:
 
+<p align="center">
+  <img src="images/home.png" alt="Giao diện Trang chủ" width="800">
+  <br>
+  <em>Giao diện danh sách sản phẩm dinh dưỡng mô phỏng E-commerce.</em>
+</p>
+
+<p align="center">
+  <img src="images/chatbot.png" alt="Giao diện Chatbot AI" width="800">
+  <br>
+  <em>Trợ lý ảo AI tư vấn dinh dưỡng tích hợp ngay trên Website.</em>
+</p>
+
 - **Backend (FastAPI - `api_server.py`):**
   - Host bộ dữ liệu thực phẩm dưới dạng REST API (`/api/foods`).
   - Tích hợp công cụ phân trang (Pagination), lọc theo danh mục, lọc theo từ khoá.
