@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans);
+}
+
+@layer components {
+  .chart-container {
+    @apply bg-white rounded-lg shadow-sm p-6 border border-slate-200;
+  }
+
+  .kpi-card {
+    @apply bg-white rounded-lg shadow-sm p-6 border border-slate-200 hover:shadow-md transition-shadow;
+  }
+
+  .tab-button {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .tab-button.active {
+    @apply bg-blue-600 text-white shadow-md;
+  }
+
+  .tab-button:not(.active) {
+    @apply bg-slate-100 text-slate-700 hover:bg-slate-200;
+  }
+}
